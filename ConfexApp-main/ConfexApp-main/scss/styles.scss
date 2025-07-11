@@ -1,0 +1,1161 @@
+@use "bootstrap/scss/bootstrap" as *;
+
+// === VARIABLES PRINCIPALES ===
+$gold: #b8860b;
+$white: #fff;
+$black: #000;
+$dark-bg: #23272b;
+$border-radius: 50px;
+$shadow-gold: 0 0 15px rgba(184, 134, 11, 0.5);
+$shadow-white: 0 0 15px rgba(255, 255, 255, 0.5);
+
+// === FUENTES Y TIPOGRAFÍAS ===
+@font-face {
+  font-family: "Monterey";
+  src: url("../src/assets/fonts/MontereyFLF.woff2") format("woff2"),
+    url("../src/assets/fonts/MontereyFLF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// === UTILIDADES DE FUENTE ===
+.custom-font-title,
+.custom-font-title-gold,
+.custom-font-titleArticle-gold {
+  font-family: "Monterey";
+  letter-spacing: clamp(6.24px, 0.23em, 19.76px);
+}
+
+.custom-font-title {
+  font-size: clamp(38px, 9vw, 90px);
+}
+
+.custom-font-title-gold {
+  color: $gold;
+  font-size: clamp(38px, 9vw, 46px);
+}
+
+.custom-font-titleArticle-gold {
+  color: $gold;
+  font-size: clamp(12px, 9vw, 36px);
+}
+
+.custom-font-subtitle,
+.custom-font-subtitle-gold,
+.custom-font-subtitleArticle-gold,
+.custom-font-subtitleArticle2-gold {
+  font-family: "Julius Sans One", sans-serif;
+  letter-spacing: clamp(1px, 0.23em, 7.36px);
+}
+
+.custom-font-subtitle {
+  font-size: clamp(13px, 3vw, 28px);
+}
+
+.custom-font-subtitle-gold {
+  color: $gold;
+  font-size: clamp(12px, 4vw, 21px);
+}
+
+.custom-font-subtitleArticle-gold {
+  color: $gold;
+  font-size: clamp(12px, 9vw, 36px);
+}
+
+.custom-font-subtitleArticle2-gold {
+  color: $gold;
+  font-size: clamp(22px, 3vw, 28px);
+}
+
+.custom-font-subtitleArticle-gold th {
+  color: #b8860b !important;
+  font-size: clamp(15px, 3vw, 22px) !important;
+  font-style: normal !important;
+  font-weight: 100;
+  text-align: center;
+}
+
+.custom-font-normal,
+.custom-font-normalArticle,
+.custom-font-small,
+.custom-font-Extrasmall {
+  font-family: "Jura", sans-serif;
+}
+
+.custom-font-normal {
+  font-size: clamp(12px, 3vw, 22px);
+  color: rgba(255, 255, 255, 0.8);
+  --bs-text-opacity: 1;
+}
+
+.custom-font-normalArticle {
+  font-size: clamp(15px, 2vw, 22px);
+  color: rgba(255, 255, 255, 0.6);
+  --bs-text-opacity: 1;
+}
+
+.custom-font-normalArticle td {
+  font-size: clamp(15px, 3vw, 22px)  !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  --bs-text-opacity: 1 !important;
+  text-align: center;
+}
+
+.custom-font-small {
+  font-size: clamp(10px, 3vw, 20px);
+}
+
+.custom-font-Extrasmall {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(12px, 3vw, 18px);
+}
+
+// === BOTONES PERSONALIZADOS ===
+%btn-base {
+  border-radius: $border-radius;
+  padding: 10px 10px;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(12px, 3vw, 25px);
+  letter-spacing: clamp(1px, 0.23em, 7.36px);
+  height: -webkit-fill-available;
+  transition: all 0.1s ease;
+}
+
+.custom-btn,
+.custom-btn2,
+.custom-btn3 {
+  @extend %btn-base;
+  border: 2px solid $white;
+  background: $black;
+  color: $white;
+  box-shadow: $shadow-white;
+  &:hover,
+  &:focus {
+    border: 4px solid $white !important;
+    background: $white;
+    color: $black !important;
+    box-shadow: $shadow-white !important;
+    outline: none !important;
+  }
+}
+
+.custom-btn2 {
+  font-size: clamp(15px, 2vw, 22px);
+  width: 50% !important;
+  padding: 3px;
+}
+
+.custom-btn3 {
+  font-size: clamp(15px, 2vw, 22px);
+  width: 80% !important;
+  padding: 3px;
+}
+
+.custom-btn-gold,
+.custom-btn-gold2,
+.custom-btn-gold3 {
+  @extend %btn-base;
+  border: 2px solid $gold !important;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-family: "Jura", sans-serif;
+  box-shadow: $shadow-gold !important;
+  box-shadow: 0 0 10px rgba(184, 134, 11, 0.5) !important;
+  font-size: clamp(15px, 3vw, 22px) !important;
+  letter-spacing: 0px !important;
+  backdrop-filter: blur(5px);
+  &:hover,
+  &:focus {
+    border: 4px solid $gold !important;
+    background: rgba(184, 134, 11, 0.5) !important;
+    color: $white !important;
+    box-shadow: $shadow-gold !important;
+    outline: none !important;
+  }
+}
+
+.custom-btn-gold2 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.custom-btn-gold3 {
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+
+.btnc {
+  font-size: clamp(12px, 3vw, 22px) !important;
+}
+
+.btnc2 {
+  height: 50%;
+  width: 70%;
+}
+
+.btn-link {
+  transition: all 0.1s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $white !important;
+    font-weight: bold;
+    font-size: clamp(12px, 3vw, 22px);
+    text-shadow: 0 8px 15px rgba(255, 255, 255, 0.5);
+  }
+}
+
+// === INPUTS PERSONALIZADOS ===
+.custom-input,
+.custom-input-gold {
+  border-radius: $border-radius;
+  font-family: "Jura", sans-serif;
+  font-size: clamp(15px, 3vw, 22px);
+  color: $white !important;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 0.8;
+  }
+}
+
+input.custom-input:-webkit-autofill,
+input.custom-input-gold:-webkit-autofill {
+  all: unset;
+}
+
+.custom-input {
+  border: 2px solid $white;
+  background-color: $black;
+  box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.3);
+  &:hover,
+  &:focus {
+    border: 4px solid $white !important;
+    background: $black;
+    box-shadow: $shadow-white !important;
+    outline: none !important;
+  }
+  &::placeholder {
+    position: relative;
+    opacity: 0.6;
+  }
+}
+
+.custom-input-gold {
+  border: 2px solid $gold;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
+  &:hover,
+  &:focus {
+    border: 4px solid $gold !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    box-shadow: $shadow-gold !important;
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+input[type="number"] {
+  color-scheme: dark;
+  cursor: pointer;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    filter: invert(1) grayscale(1) brightness(0.5);
+  }
+}
+
+.input-disabled-dark:disabled {
+  background-color: $dark-bg !important;
+  opacity: 0.6 !important;
+  color: #bbb !important;
+  cursor: not-allowed;
+}
+
+.custom-input-trasnparent {
+  &::placeholder {
+    font-family: "Jura", sans-serif !important;
+    font-weight: bold !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    opacity: 0.8;
+  }
+}
+
+.custom-input-trasnparent:-webkit-autofill {
+  all: unset;
+}
+
+// === SIDEBAR Y NAVEGACIÓN ===
+.sidebar {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 295px;
+  height: -webkit-fill-available;
+  border-right: 2px solid $gold;
+  box-shadow: 4px 0px 20px -2px $gold;
+  background: rgba(35, 39, 43, 0.85);
+  padding: 2vh 1vw 2vh;
+  padding: 2dvh 1dvw 2dvh;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  animation: sidebarFadeIn 0.7s;
+  scrollbar-color: $gold transparent;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $gold;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+}
+
+@keyframes sidebarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: auto;
+  left: auto;
+  margin-left: 2vw;
+  margin-top: 2vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid $gold !important;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(184, 134, 11, 0.5) !important;
+  backdrop-filter: blur(5px);
+  font-family: "Jura", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  z-index: 1100;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+  &.open {
+    background-color: #8b5e00;
+    transform: rotate(90deg);
+  }
+  &:hover {
+    background-color: #b8870bab;
+  }
+}
+
+// === SCROLLBARS PERSONALIZADOS ===
+.custom-scrollbar {
+  scrollbar-color: $black transparent;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $black;
+    border-radius: 8px;
+  }
+}
+
+// === LINKS PERSONALIZADOS ===
+.nav-link {
+  transition: all 0.1s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $white !important;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 0 8px 15px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.Link-bar {
+  display: block;
+  text-decoration: none;
+  font-family: "Jura", sans-serif;
+  font-size: clamp(12px, 4vw, 18px);
+  --bs-text-opacity: 1;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 10px 20px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $gold !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 8px 15px rgba(184, 134, 11, 0.5);
+  }
+}
+
+.Link-subtitle-gold {
+  display: block !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  & h2 {
+    transition: all 0.2s ease;
+    &:hover {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-shadow: 0 8px 15px rgba(184, 134, 11, 0.5);
+    }
+  }
+}
+
+// === IMÁGENES PERSONALIZADAS ===
+.custom-profile-img,
+.custom-profile-img2,
+.custom-QR-img {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 3px;
+  border: 2px solid $gold;
+  box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+}
+
+.custom-profile-img {
+  border-radius: 50%;
+}
+
+.img-fluid {
+  width: 70%;
+  height: auto;
+}
+
+.img-fluid2 {
+  width: 50%;
+  height: auto;
+}
+
+// === DROPDOWN PERSONALIZADO ===
+.custom-dropdown-toggle::after {
+  color: $gold !important;
+  border-top-color: $gold !important;
+  box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+}
+
+.custom-dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid $gold !important;
+  border-radius: $border-radius;
+  box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+  backdrop-filter: blur(5px);
+  font-family: "Jura", sans-serif;
+  --bs-text-opacity: 1;
+  color: rgba(255, 255, 255, 0.8);
+  & .dropdown-item {
+    color: $white !important;
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: $border-radius;
+    }
+  }
+  & .dropdown-header {
+    font-family: "Jura", sans-serif;
+    --bs-text-opacity: 1 !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+// === DATEPICKER OSCURO ===
+.datepicker-dark {
+  .react-datepicker,
+  .react-datepicker__header,
+  .react-datepicker__time,
+  .react-datepicker__time-box {
+    background: $dark-bg !important;
+    color: #fff !important;
+    border-color: $gold !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 32px 0 #000a, 0 1.5px 6px 0 #b8860b44;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: #444 !important;
+      color: #fff !important;
+      box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $gold !important;
+      outline-offset: 2px !important;
+    }
+
+    &:disabled {
+      background: $dark-bg !important;
+      color: #444 !important;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name {
+    color: #fff !important;
+    font-weight: 500;
+    font-family: "Jura", sans-serif;
+    font-size: clamp(7px, 1vw, 14px) !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $gold !important;
+      box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $gold !important;
+      outline-offset: 2px !important;
+    }
+
+    &:disabled {
+      color: #444 !important;
+      background: $dark-bg !important;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .react-datepicker__day,
+  .react-datepicker__month-text,
+  .react-datepicker__quarter-text,
+  .react-datepicker__year-text {
+    color: #fff !important;
+    font-weight: 500;
+    font-family: "Jura", sans-serif;
+    font-size: clamp(7px, 1vw, 14px) !important;
+    border-radius: 50% !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: #444 !important;
+      color: #fff !important;
+      box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $gold !important;
+      outline-offset: 2px !important;
+    }
+
+    &:disabled {
+      background: $dark-bg !important;
+      color: #444 !important;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &--selected,
+    &--keyboard-selected {
+      background: $gold !important;
+      color: $dark-bg !important;
+      border-radius: 50% !important;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: $gold !important;
+        color: $dark-bg !important;
+        box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+      }
+
+      &:focus-visible {
+        outline: 2px solid $gold !important;
+        outline-offset: 2px !important;
+      }
+
+      &:disabled {
+        background: $dark-bg !important;
+        color: #444 !important;
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    &--today {
+      border: 1.5px solid $gold !important;
+      border-radius: 50% !important;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: 1.5px solid $gold !important;
+        background: $gold !important;
+        color: $dark-bg !important;
+        box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+      }
+
+      &:disabled {
+        border: 1.5px solid #444 !important;
+        background: $dark-bg !important;
+        color: #444 !important;
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    &--disabled {
+      color: #444 !important;
+      background: $dark-bg !important;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .react-datepicker__navigation {
+    top: 10px !important;
+    border: none !important;
+    background: transparent !important;
+    color: $gold !important;
+    box-shadow: none !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: rgba(184, 134, 11, 0.1) !important;
+      color: $gold !important;
+      box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $gold !important;
+      outline-offset: 2px !important;
+    }
+
+    &:disabled {
+      color: #444 !important;
+      background: $dark-bg !important;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &--next {
+      right: 10px !important;
+    }
+    &--previous {
+      left: 10px !important;
+    }
+    &--before,
+    &--disabled {
+      left: 10px !important;
+      right: 10px !important;
+      background: $dark-bg !important;
+      color: #444 !important;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    &icon {
+      color: $gold !important;
+      font-size: clamp(10px, 1vw, 22px) !important;
+      font-weight: bold !important;
+      font-family: "Jura", sans-serif !important;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff !important;
+        box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+      }
+      &:focus-visible {
+        outline: 2px solid $gold !important;
+        outline-offset: 2px !important;
+      }
+      &:disabled {
+        color: #444 !important;
+        background: $dark-bg !important;
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .react-datepicker__time-container,
+  .react-datepicker__time-list {
+    background: $dark-bg !important;
+    color: #fff !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 32px 0 #000a, 0 1.5px 6px 0 #b8860b44;
+    font-family: "Jura", sans-serif !important;
+    font-size: clamp(7px, 1vw, 14px) !important;
+  }
+
+  .react-datepicker__time-list {
+    padding: 10px !important;
+    overflow-y: auto !important;
+    max-height: 200px !important;
+    scrollbar-color: #000 transparent !important;
+    scrollbar-width: thin !important;
+    &::-webkit-scrollbar {
+      width: 8px !important;
+      background: transparent !important;
+      border-radius: 4px !important;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #000 !important;
+      border-radius: 4px !important;
+      &:hover {
+        background-color: #444 !important;
+      }
+      &:active,
+      &:focus {
+        background-color: $gold !important;
+      }
+    }
+  }
+
+  .react-datepicker__time-list-item {
+    color: #fff !important;
+    font-family: "Jura", sans-serif;
+    font-size: clamp(5px, 1vw, 14px) !important;
+    padding: 5px 10px !important;
+    border-radius: 10px !important;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    &:hover,
+    &:focus,
+    &:active {
+      background: #444 !important;
+      color: #fff !important;
+      box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+    }
+    &:focus-visible {
+      outline: 2px solid $gold !important;
+      outline-offset: 2px !important;
+    }
+    &--selected {
+      background: $gold !important;
+      color: $dark-bg !important;
+      font-weight: bold;
+      &:hover,
+      &:focus,
+      &:active {
+        background: $gold !important;
+        color: $dark-bg !important;
+        box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+      }
+      &:focus-visible {
+        outline: 2px solid $gold !important;
+        outline-offset: 2px !important;
+      }
+    }
+    &--disabled {
+      color: #444 !important;
+      background: $dark-bg !important;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .react-datepicker__input-container input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.5) !important;
+    color: white !important;
+    border: 4px solid $gold !important;
+    border-radius: 30px !important;
+    padding: 10px 20px !important;
+    font-family: "Jura", sans-serif;
+    font-size: clamp(7px, 1vw, 20px) !important;
+    letter-spacing: clamp(1px, 0.23em, 7.36px) !important;
+    width: 100% !important;
+    height: 40px !important;
+    outline: none !important;
+    transition: all 0.3s ease !important;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+      font-size: clamp(7px, 1vw, 20px) !important;
+      line-height: 1.2 !important;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 0 15px rgba(184, 134, 11, 0.5) !important;
+      color: white !important;
+      border: 4px solid $gold !important;
+      outline: none !important;
+      transition: all 0.3s ease !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $gold !important;
+      outline-offset: 2px !important;
+    }
+
+    &:disabled {
+      background-color: $dark-bg !important;
+      color: #444 !important;
+      opacity: 0.5 !important;
+      cursor: not-allowed !important;
+    }
+  }
+
+  .react-datepicker__triangle {
+    display: none !important;
+  }
+
+  .react-datepicker__close-icon {
+    color: $gold !important;
+    font-size: clamp(10px, 1vw, 22px) !important;
+    font-weight: bold !important;
+    font-family: "Jura", sans-serif !important;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff !important;
+      box-shadow: 0 0 6px rgba(184, 134, 11, 0.5) !important;
+    }
+    &:focus-visible {
+      outline: 2px solid $gold !important;
+      outline-offset: 2px !important;
+    }
+    &:disabled {
+      color: #444 !important;
+      background: $dark-bg !important;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// === CONTENEDORES ===
+html,
+body,
+#root {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.custom-border-bottom {
+  border-bottom: 2px solid $gold;
+  box-shadow: 0px 4px 10px -2px $gold;
+}
+
+.icon-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.form-floating > label {
+  pointer-events: none;
+}
+
+.bg-dark2 {
+  border-radius: 25px !important;
+}
+
+.row2 {
+  height: 70%;
+}
+
+.col-custom-md-3 {
+  width: 100%;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.container-custom2 {
+  width: 70%;
+}
+
+// === MAPA DE EVENTO ===
+.custom-map-glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid $gold;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 12px 2px rgba(184, 134, 11, 0.5);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.map-search-box {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 50%;
+  .search-inner {
+    position: relative;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid $gold;
+    border-radius: 30px;
+    text-align: center;
+    &:hover,
+    &:focus {
+      border: 3px solid $gold;
+      box-shadow: $shadow-gold;
+      transform: scale(1.05);
+      .search-predictions {
+        border: 3px solid $gold;
+        box-shadow: $shadow-gold;
+        text-align: start;
+        margin: -2px -3px 0px -3px;
+      }
+    }
+    input {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.8);
+      font-family: "Jura", sans-serif;
+      font-size: 1em;
+      border-radius: 30px;
+      padding: 10px 15px;
+      box-shadow: none;
+      outline: none;
+      width: 100%;
+      font-weight: bold;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: bold;
+      }
+    }
+    .search-predictions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin-left: -2px;
+      margin-right: -2px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid $gold;
+      border-radius: 0 0 30px 30px;
+      box-shadow: $shadow-gold;
+      z-index: 30;
+      max-height: 220px;
+      overflow-y: auto;
+      scrollbar-color: $gold $dark-bg;
+      scrollbar-width: thin;
+      backdrop-filter: blur(5px);
+      .custom-scrollbar {
+        &::-webkit-scrollbar {
+          width: 8px;
+          background: rgba(0, 0, 0, 0.6);
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $gold;
+        }
+        &::-webkit-scrollbar-track {
+          background: rgba(0, 0, 0, 0.6);
+        }
+      }
+      .prediction-item {
+        padding: 12px 18px 8px 18px;
+        cursor: pointer;
+        border-bottom: 2px solid rgba(184, 134, 11, 0.5);
+        background: transparent;
+        transition: background 0.2s;
+        font-family: "Jura", sans-serif;
+        backdrop-filter: blur(5px);
+        &:hover,
+        &:focus {
+          background: rgba(122, 122, 122, 0.2);
+        }
+        .main-text {
+          font-weight: 700;
+          font-size: 1em;
+          color: #fffbe6;
+        }
+        .secondary-text {
+          font-size: 0.8em;
+          font-weight: 700;
+          color: $gold;
+          margin-top: 4px;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+.with-predictions {
+  border-radius: 30px 30px 0 0 !important;
+}
+
+.map-controls {
+  position: absolute;
+  bottom: 22px;
+  right: 10px;
+  z-index: 21;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.map-btn {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  border: 2px solid $gold;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-gold;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 2px;
+  outline: none;
+  &:hover,
+  &:focus {
+    background: $gold !important;
+    border-color: #ffe082 !important;
+    box-shadow: 0 0 12px 2px #b8860b55;
+    transform: scale(1.1);
+
+    .icon-map {
+      color: $black !important;
+    }
+  }
+
+  .icon-map {
+    background-color: transparent;
+    color: $gold;
+    border: none;
+  }
+}
+
+.streetview-drag-icon {
+  pointer-events: none;
+  position: absolute;
+  z-index: 99999;
+  width: 13px;
+  height: 13px;
+  left: 0;
+  top: 0;
+  opacity: 0.95;
+  background: rgba(35, 39, 43, 0.95);
+  border: 2px solid $gold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px 2px #b8860b55;
+}
+
+// === MEDIA QUERIES ===
+
+@media (min-width: 1300px) {
+  .col-custom-md-3 {
+    width: 25%;
+    padding: 3rem 1rem !important;
+    flex: 0 0 auto;
+  }
+  .container-custom {
+    height: 100%;
+  }
+  .w-md-100-force {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .btnc {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 1299px) {
+  .img-fluid {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .sidebar {
+    position: absolute;
+    left: -100%;
+    width: 50%;
+    height: -webkit-fill-available;
+    background-color: rgba(35, 39, 43, 0.85);
+    transition: all 0.3s ease;
+    &.active {
+      left: auto;
+    }
+  }
+  .sidebar-toggle {
+    display: block;
+  }
+  .container-custom2 {
+    width: 90% !important;
+  }
+  .main-content {
+    padding-top: 12vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-btn2 {
+    width: 100% !important;
+  }
+  .Link-bar:hover {
+    font-size: 1.2rem;
+  }
+  .Link-subtitle-gold:hover h2 {
+    font-size: 1.8rem;
+  }
+  .row2 {
+    height: auto;
+  }
+  .btnc2 {
+    height: 100%;
+    width: 100%;
+  }
+  .containerbtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .Link-bar:hover {
+    font-size: 0.8rem;
+  }
+  .Link-subtitle-gold:hover h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .custom-responsive-row {
+    flex-direction: column !important;
+  }
+  .map-search-box {
+    left: 30%;
+  }
+}
