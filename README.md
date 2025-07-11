@@ -2,9 +2,9 @@
 
 ## ⚠️ Aviso de Derechos de Autor y Uso
 
-Este proyecto es parte de una tesis académica y está protegido por derechos de autor. Todos los derechos están reservados.
+Este proyecto es parte de una tesis académica por parte del Intituto Politecnico Nacional y está protegido por derechos de autor. Todos los derechos están reservados.
 
-© 2024. Todos los derechos reservados.
+© 2025. Todos los derechos reservados.
 
 ### Restricciones de Uso
 
