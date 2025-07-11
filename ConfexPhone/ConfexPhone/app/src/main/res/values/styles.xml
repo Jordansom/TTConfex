@@ -1,0 +1,14 @@
+<resources>
+    <!-- ...otros estilos... -->
+    <style name="ConfexGoldButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@android:color/black</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="strokeColor">@color/primary_color</item>
+        <item name="strokeWidth">5dp</item>
+        <item name="cornerRadius">32dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
+

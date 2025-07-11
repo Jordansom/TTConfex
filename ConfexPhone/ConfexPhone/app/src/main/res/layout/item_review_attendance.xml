@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Name and Role -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nombre Completo"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rol: Asistente"
+                android:textSize="12sp"
+                android:textColor="@color/primary_color"
+                android:background="@drawable/ic_back"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+        <!-- Time Information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvEntryTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entrada: 2024-01-01 09:00:00"
+                android:textSize="14sp"
+                android:textColor="@color/success_color"
+                android:drawableStart="@drawable/ic_confex_logo"
+                android:drawablePadding="8dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvExitTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salida: 2024-01-01 17:00:00"
+                android:textSize="14sp"
+                android:textColor="@color/error_color"
+                android:drawableStart="@drawable/ic_logout"
+                android:drawablePadding="8dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horas: 8"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:drawableStart="@drawable/ic_person_check"
+                android:drawablePadding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btnEditHours"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="Editar Horas"
+                android:textSize="12sp"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="Eliminar"
+                android:textSize="12sp"
+                android:backgroundTint="@color/error_color"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="12dp" />
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF" />
+    <solid android:color="#00000000" />
+</shape>
+
+
+    <!-- Iconos necesarios:
+    ic_confex_logo.xml
+    ic_add_list.xml
+    ic_continue_list.xml
+    ic_folder.xml
+    ic_back.xml
+    ic_search.xml
+    ic_no_files.xml
+    ic_upload.xml
+    ic_flash_off.xml
+    ic_person_check.xml
+    ic_mode_switch.xml
+    ic_success.xml
+    ic_excel_file.xml
+    ic_more_vert.xml
+    -->

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales dorado, negro y blanco -->
+    <color name="primary_color">#b8860b</color> <!-- Gold -->
+    <color name="primary_dark">#23272b</color>  <!-- Fondo oscuro -->
+    <color name="primary_light">#fffbe6</color> <!-- Fondo claro dorado -->
+    <color name="secondary_color">#fff</color>  <!-- Blanco -->
+    <color name="accent_color">#b8860b</color>  <!-- Gold -->
+
+    <!-- Colores de texto -->
+    <color name="text_primary">#fff</color>
+    <color name="text_secondary">#b8860b</color>
+    <color name="text_tertiary">#e0c97f</color>
+
+    <!-- Colores de fondo -->
+    <color name="background_color">#23272b</color>
+    <color name="card_stroke">#b8860b</color>
+    <color name="chip_background">#fffbe6</color>
+
+    <!-- Colores de estado -->
+    <color name="success_color">#4CAF50</color>
+    <color name="success_background">#388E3C</color>
+    <color name="error_color">#F44336</color>
+    <color name="warning_color">#FF9800</color>
+
+    <!-- Colores estándar -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Colores específicos -->
+    <color name="excel_green">#217346</color>
+</resources>
